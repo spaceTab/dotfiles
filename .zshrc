@@ -109,6 +109,7 @@ alias hlt='shutdown -h now'
 alias rbt='shutdown -r now' 
 alias ch755='chmod +755'
 alias chx='chmod +x'
+alias rmr='sudo rm -r'
 alias TODO='sed "" ~/.local/share/plasma_notes/todolist' 
 alias endtk='sudo vim ~/Documents/kratom-log/intake.log'
 ############### Run Scripts & Applications ################################
@@ -119,31 +120,33 @@ alias intk='~/Documents/Programming/Scripts/shell-scripts ; ./intake.sh && cd "$
 alias rl='~/Downloads/Runelite/ ; ./RuneLite.AppImage & ; disown ./RuneLite'
 alias pipe='pipes.sh $i'
 alias zbak='~/Documents/Programming/Scripts/shell-scripts ; ./zshbackup.sh'
+alias vbak='~/Documents/Programming/Scripts/shell-scripts ; ./vimrcbackup.sh'
 ################# Shortcuts to Dir ################################
 alias pro='~/Documents/Programming' 
 alias SH='~/Documents/Programming/Scripts/shell-scripts' 
 alias PIC='~/Pictures' 
 alias css='~/Documents/Programming/CSS/FrontEnd_Prac' 
 alias docs='~/Documents'
+alias dl='~/Downloads'
 
 
 
 #### Using ZSH's chpwd() to Run list everytime i change directory
 chpwd() ls
 
-function powerline_precmd() {
-    PS1="$(powerline-shell --shell zsh $?)"
-}
+#function powerline_precmd() {
+   # PS1="$(powerline-shell --shell zsh $?)"
+#}
 
-function install_powerline_precmd() {
-  for s in "${precmd_functions[@]}"; do
-    if [ "$s" = "powerline_precmd" ]; then
-      return
-    fi
-  done
-  precmd_functions+=(powerline_precmd)
-}
+#function install_powerline_precmd() {
+  #for s in "${precmd_functions[@]}"; do
+    #if [ "$s" = "powerline_precmd" ]; then
+     # return
+    #fi
+#done
+#precmd_functions+=(powerline_precmd)
+#}
 
-if [ "$TERM" != "linux" ]; then
-    install_powerline_precmd
-fi
+#if [ "$TERM" != "linux" ]; then
+#   install_powerline_precmd
+#fi
