@@ -113,15 +113,16 @@ alias chx='chmod +x'
 alias rmr='sudo rm -r'
 alias TODO='sed "" ~/.local/share/plasma_notes/todolist' 
 alias endtk='sudo nvim ~/Documents/kratom-log/intake.log'
+
 ############### Run Scripts & Applications ################################
 alias SH='~/Documents/Programming/Scripts/shell-scripts' 
 alias PROJ='~/Documents/Programming/Projects' 
 alias UPD='~/Documents/Programming/Scripts/shell-scripts ; ./archUpdater.sh && cd "$OLDPWD"; pwd' 
 alias intk='~/Documents/Programming/Scripts/shell-scripts ; ./intake.sh && cd "$OLDPWD"' 
 alias rl='~/Downloads/Runelite/ ; ./RuneLite.AppImage & ; disown ./RuneLite; cd "$OLDPWD"'
-alias pipe='pipes.sh'
 alias zbak='~/Documents/Programming/Scripts/shell-scripts ; ./zshbackup.sh'
 alias vbak='~/Documents/Programming/Scripts/shell-scripts ; ./vimrcbackup.sh'
+
 ################# Shortcuts to Dir ################################
 alias pro='~/Documents/Programming' 
 alias SH='~/Documents/Programming/Scripts/shell-scripts' 
@@ -129,6 +130,11 @@ alias PIC='~/Pictures'
 alias css='~/Documents/Programming/CSS/FrontEnd_Prac' 
 alias docs='~/Documents'
 alias dl='~/Downloads'
+
+############### FUN ###############################################
+alias pipe='pipe.sh'
+alias tclock='tty-clock [ -tc ]'
+alias hax0r='hollywood'
 
 
 
