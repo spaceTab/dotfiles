@@ -159,11 +159,11 @@ chpwd() ls
 #fi
 
 echo " \n\n\n"
-echo "\t\t $USER "
-echo "\t\t OS: Manjaro"
-echo "\t\t WM: $XDG_CURRENT_DESKTOP"
-echo "\t\t Uptime$(uptime -p)"
-echo "\t\t Packages:$(pacman -Q | wc -l)"
-echo "\t\t Shell: ZSH (Oh-My-ZSH)"
+echo "\t $USER "
+echo "\t OS: Manjaro"
+echo "\t WM: $XDG_CURRENT_DESKTOP"
+echo "\t Uptime$(uptime -p)"
+echo "\t Packages:$(pacman -Q | wc -l)"
+echo "\t Shell: ZSH (Oh-My-ZSH)"
 echo "\n\n"
 
