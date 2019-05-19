@@ -157,3 +157,13 @@ chpwd() ls
 #if [ "$TERM" != "linux" ]; then
 #   install_powerline_precmd
 #fi
+
+echo " \n\n\n"
+echo "\t\t $USER "
+echo "\t\t OS: Manjaro"
+echo "\t\t WM: $XDG_CURRENT_DESKTOP"
+echo "\t\t Uptime$(uptime -p)"
+echo "\t\t Packages:$(pacman -Q | wc -l)"
+echo "\t\t Shell: ZSH (Oh-My-ZSH)"
+echo "\n\n"
+
