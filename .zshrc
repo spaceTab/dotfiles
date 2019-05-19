@@ -158,7 +158,7 @@ chpwd() ls
 #   install_powerline_precmd
 #fi
 
-echo " \n\n\n"
+echo " \n\n"
 echo "\t $USER "
 echo "\t OS: Manjaro"
 echo "\t WM: $XDG_CURRENT_DESKTOP"
