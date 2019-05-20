@@ -52,7 +52,7 @@ ZSH_THEME="avit"
 # one of the optional three formats: 
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd" or set a custom format using 
 # the strftime function format specifications, see 'man strftime' for 
-# details. HIST_STAMPS="mm/dd/yyyy"
+ details. HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom? 
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -68,7 +68,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
+export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment export 
 # LANG=en_US.UTF-8
@@ -94,10 +94,8 @@ source $ZSH/oh-my-zsh.sh
 ##########################################################################
 NOW=$(date +"%m-%d-%Y %r") export NOW
 
-##########################################################################
-######################   My Aliases ########
-######################   #############################
-##########################################################################
+######################   My Aliases #########################################
+
 alias cb='cd ..' 
 alias lsa='ls -a' 
 alias nan='sudo nano'
@@ -141,29 +139,34 @@ alias hax0r='hollywood'
 #### Using ZSH's chpwd() to Run list everytime i change directory
 chpwd() ls
 
-#function powerline_precmd() {
-   # PS1="$(powerline-shell --shell zsh $?)"
+
+################ PERSONAL HELPER FUNCTIONS ##########################
+#mkcd() {
+#        if [ $# != 1 ]; then
+#                echo "Usage: mkcd <dir>"
+#        else
+#                mkdir -p $1 && cd $1
+#        fi
 #}
 
-#function install_powerline_precmd() {
-  #for s in "${precmd_functions[@]}"; do
-    #if [ "$s" = "powerline_precmd" ]; then
-     # return
-    #fi
-#done
-#precmd_functions+=(powerline_precmd)
-#}
-
-#if [ "$TERM" != "linux" ]; then
-#   install_powerline_precmd
-#fi
 
 echo " \n\n"
-echo "\t $USER "
+echo "\t $USER"
 echo "\t OS: Manjaro"
 echo "\t WM: $XDG_CURRENT_DESKTOP"
-echo "\t Uptime$(uptime -p)"
-echo "\t Packages:$(pacman -Q | wc -l)"
-echo "\t Shell: ZSH (Oh-My-ZSH)"
+echo "\t $(uptime -p)"
+echo "\t Packages: $(pacman -Q | wc -l)"
+echo "\t Shell: $0"
+echo "\t $(date)"
 echo "\n\n"
 
+
+#Color for manpages in less makes manpages a little easier to read:
+
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;31m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;32m'
