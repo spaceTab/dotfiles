@@ -52,7 +52,7 @@ ZSH_THEME="avit"
 # one of the optional three formats: 
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd" or set a custom format using 
 # the strftime function format specifications, see 'man strftime' for 
- details. HIST_STAMPS="mm/dd/yyyy"
+# details. HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom? 
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -97,6 +97,8 @@ NOW=$(date +"%m-%d-%Y %r") export NOW
 ######################   My Aliases #########################################
 
 alias cb='cd ..' 
+alias cb.='cd ...'
+alias cb...='cd ....'
 alias lsa='ls -a' 
 alias nan='sudo nano'
 alias nv='nvim'
@@ -120,7 +122,7 @@ alias intk='~/Documents/Programming/Scripts/shell-scripts ; ./intake.sh && cd "$
 alias rl='~/Downloads/Runelite/ ; ./RuneLite.AppImage & ; disown ./RuneLite; cd "$OLDPWD"'
 alias zbak='~/Documents/Programming/Scripts/shell-scripts ; ./zshbackup.sh'
 alias vbak='~/Documents/Programming/Scripts/shell-scripts ; ./vimrcbackup.sh'
-
+alias drops='nvim ~/Documents/bigDrops.txt'
 ################# Shortcuts to Dir ################################
 alias pro='~/Documents/Programming' 
 alias SH='~/Documents/Programming/Scripts/shell-scripts' 
@@ -130,10 +132,17 @@ alias docs='~/Documents'
 alias dl='~/Downloads'
 
 ############### FUN ###############################################
-alias pipe='pipe.sh'
+alias pipe='pipes.sh'
 alias tclock='tty-clock [ -tc ]'
 alias hax0r='hollywood'
+alias parrot='curl parrot.live'
+alias rolled='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
+############ CURL ###############
+alias news='curl getnews.tech/'
+alias ip4='curl -4 ifconfig.co'
+alias ip6='curl -6 ifconfig.co'
+alias cheats='curl cheat.sh/'
 
 
 #### Using ZSH's chpwd() to Run list everytime i change directory
@@ -151,8 +160,7 @@ chpwd() ls
 
 
 echo " \n\n"
-echo "\t $USER"
-echo "\t OS: Manjaro"
+echo "\t $USER // Manjaro"
 echo "\t WM: $XDG_CURRENT_DESKTOP"
 echo "\t $(uptime -p)"
 echo "\t Packages: $(pacman -Q | wc -l)"
