@@ -115,7 +115,7 @@ alias TODO='sed "" ~/.local/share/plasma_notes/todolist'
 alias endtk='sudo nvim ~/Documents/kratom-log/intake.log'
 #pac Options -> Q: query q: quiet d: depedancy t: not needed
 alias findOrphans='sudo pacman -Qqdt'
-alias rmOrphans='sudo pacman -Rsun $(pacman -Qqdt)
+alias rmOrphans='sudo pacman -Rsun $(pacman -Qqdt)'
 ############### Run Scripts & Applications ################################
 alias SH='~/Documents/Programming/Scripts/shell-scripts' 
 alias PROJ='~/Documents/Programming/Projects' 
