@@ -161,14 +161,14 @@ chpwd() ls
 #}
 
 
-echo " \n\n"
+echo " \n"
 echo "\t $USER // Manjaro"
 echo "\t WM: $XDG_CURRENT_DESKTOP"
 echo "\t $(uptime -p)"
 echo "\t Packages: $(pacman -Q | wc -l)"
 echo "\t Shell: $0"
 echo "\t $(date)"
-echo "\n\n"
+echo "\n"
 
 
 #Color for manpages in less makes manpages a little easier to read:
