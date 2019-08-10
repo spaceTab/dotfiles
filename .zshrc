@@ -116,6 +116,7 @@ alias endtk='sudo nvim ~/Documents/kratom-log/intake.log'
 #pac Options -> Q: query q: quiet d: depedancy t: not needed
 alias findOrphans='sudo pacman -Qqdt'
 alias rmOrphans='sudo pacman -Rsun $(pacman -Qqdt)'
+alias shufStr='shuf -n 1 -e'
 ############### Run Scripts & Applications ################################
 alias SH='~/Documents/Programming/Scripts/shell-scripts' 
 alias PROJ='~/Documents/Programming/Projects' 
@@ -161,7 +162,7 @@ chpwd() ls
 #}
 
 
-echo " \n"
+echo "\n\n"
 echo "\t $USER // Manjaro"
 echo "\t WM: $XDG_CURRENT_DESKTOP"
 echo "\t $(uptime -p)"
@@ -169,7 +170,7 @@ echo "\t Packages: $(pacman -Q | wc -l)"
 echo "\t Kernel: $(uname -r)"
 echo "\t Shell: $0"
 echo "\t $(date)"
-echo "\n"
+
 
 
 #Color for manpages in less makes manpages a little easier to read:
