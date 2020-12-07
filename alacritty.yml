@@ -1,0 +1,81 @@
+window:
+    dimensions:
+        columns: 95
+        lines: 30
+    padding:
+      x: 20 
+      y: 10
+    dynamic_padding: true
+    
+# Background Opacity
+#
+# Window OPpacity as a floating point number from `0.0 to 1.0`
+# The value `0.0` is completely transparent & `1.0` is opaque
+background_opacity: 0.9
+
+
+
+# Adds this many blank pixels of padding around the window
+# Units are physical pixels; this is not DPI aware.
+# (change requires restart)
+
+# Font Configuration ( restart required )
+font:
+    family: "Source Code Pro"
+# Colors (Ayu Mirage)
+#colors:
+  ## Default colors
+  #primary:
+    #background: '#202734'
+    #foreground: '#CBCCC6'
+#
+  ## Normal colors
+  #normal:
+    #black: '#191E2A'
+    #red: '#FF3333'
+    #green: '#BAE67E'
+    #yellow: '#FFA759'
+    #blue: '#73D0FF'
+    #magenta: '#FFD580'
+    #cyan: '#95E6CB'
+    #white: '#C7C7C7'
+#
+  ## Bright colors
+  #bright:
+    #black: '#686868'
+    #red: '#F27983'
+    #green: '#A6CC70'
+    #yellow: '#FFCC66'
+    #blue: '#5CCFE6'
+    #magenta: '#FFEE99'
+    #cyan: '#95E6CB'
+    #white: '#FFFFFF'
+
+# Colors (Dracula)
+colors:
+  # Default colors
+  primary:
+    background: '#282a36'
+    foreground: '#f8f8f2'
+
+  # Normal colors
+  normal:
+    black:   '#000000'
+    red:     '#ff5555'
+    green:   '#50fa7b'
+    yellow:  '#f1fa8c'
+    blue:    '#caa9fa'
+    magenta: '#ff79c6'
+    cyan:    '#8be9fd'
+    white:   '#bfbfbf'
+
+  # Bright colors
+  bright:
+    black:   '#575b70'
+    red:     '#ff6e67'
+    green:   '#5af78e'
+    yellow:  '#f4f99d'
+    blue:    '#caa9fa'
+    magenta: '#ff92d0'
+    cyan:    '#9aedfe'
+    white:   '#e6e6e6'

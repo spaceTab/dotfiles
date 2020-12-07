@@ -1,2 +1,8 @@
-# dotfiles
-# My Linux Configuation files
+# Dot Files
+
+
+> - zshrc
+> - bashrc
+> - vimrc (spacevim)
+> - doomemacs
+> - Xresources

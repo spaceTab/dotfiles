@@ -1,0 +1,40 @@
+#!/bin/zsh
+
+# Navigation
+alias scr='~/Programming/shell-scripts'
+alias pro='~/Programming'
+alias pics='~/Pictures'
+alias dls='~/Downloads'
+alias doc='~/Documents'
+alias music='~/Music'
+# Basic commands
+alias cb='cd ..'
+alias nv='nvim'
+alias pac='sudo pacman'
+alias chx='chmod +x'
+alias ch755='chmod +755'
+alias rmr='sudo rm -r'
+alias mkd='mkdir -v'
+alias mkf='touch'
+alias back='cd -'
+
+# Scripts // Apps
+alias rl='~/Applications ; ./RuneLite.AppImage &;
+	disown ./RuneLite; back ; exit'
+alias convert='~/Programming/shell-scripts/convertRename.sh'
+
+#global NPM Server
+alias server='browser-sync start --server --files'
+
+# Download web-page contents in non-html format
+alias sitedl='w3m -dump'
+
+# Commands to quickly access doom(emacs) scripts
+alias doomsync='cd ~/.emacs.d/bin/ &&
+	  ./doom sync ; back'
+alias doomupg='cd ~/.emacs.d/bin/ &&
+	  ./doom upgrade ; back'
+# built-in to pwd on cd change
+chpwd() ls
+
+~/Programming/shell-scripts/termstart.sh
