@@ -1,10 +1,10 @@
 window:
     dimensions:
-        columns: 95
-        lines: 30
+        columns: 83
+        lines: 27
     padding:
-      x: 20 
-      y: 10
+      x: 30
+      y: 40
     dynamic_padding: true
     
 # Background Opacity
@@ -21,7 +21,69 @@ background_opacity: 0.9
 
 # Font Configuration ( restart required )
 font:
-    family: "Source Code Pro"
+  normal:
+    #family: "Hack 15"
+    family: SauceCodePro Nerd Font 
+    style:  Bold 
+    
+  bold:
+    family: Hack 
+    style:  Bold
+
+  italic:
+    family: SauceCodePro Nerd Font
+    style:  Italic
+
+  bold_italic:
+    family: SauceCodePro Nerd Font
+    style:  Bold Italic
+
+# Point Size of font
+  size: 10.0
+
+  offset:
+    x: 1 
+    y: 1 
+
+# If `true` bold fonts will be drawn with brighter color variants
+draw_bold_text_with_bright_colors: true
+
+
+
+
+####################################
+#         Color Schemes            #
+####################################
+
+# Colors (Dracula)
+colors:
+  # Default colors
+  primary:
+    background: '0x282c34'
+    foreground: '#f8f8f2'
+
+  # Normal colors
+  normal:
+    black:   '#000000'
+    red:     '#ff5555'
+    green:   '#50fa7b'
+    yellow:  '#f1fa8c'
+    blue:    '#caa9fa'
+    magenta: '#ff79c6'
+    cyan:    '#8be9fd'
+    white:   '#bfbfbf'
+
+  ## Bright colors
+  bright:
+    black:   '#575b70'
+    red:     '#ff6e67'
+    green:   '#5af78e'
+    yellow:  '#f4f99d'
+    blue:    '#caa9fa'
+    magenta: '#ff92d0'
+    cyan:    '#9aedfe'
+    white:   '#e6e6e6'
+
 # Colors (Ayu Mirage)
 #colors:
   ## Default colors
@@ -51,31 +113,17 @@ font:
     #cyan: '#95E6CB'
     #white: '#FFFFFF'
 
-# Colors (Dracula)
-colors:
-  # Default colors
-  primary:
-    background: '#282a36'
-    foreground: '#f8f8f2'
-
-  # Normal colors
-  normal:
-    black:   '#000000'
-    red:     '#ff5555'
-    green:   '#50fa7b'
-    yellow:  '#f1fa8c'
-    blue:    '#caa9fa'
-    magenta: '#ff79c6'
-    cyan:    '#8be9fd'
-    white:   '#bfbfbf'
-
-  # Bright colors
-  bright:
-    black:   '#575b70'
-    red:     '#ff6e67'
-    green:   '#5af78e'
-    yellow:  '#f4f99d'
-    blue:    '#caa9fa'
-    magenta: '#ff92d0'
-    cyan:    '#9aedfe'
-    white:   '#e6e6e6'
+# Colors (Doom One-ish)
+#colors:
+    #primary:
+      #background: '0x282c34'
+      #foreground: '0xbbc2cf'
+    #normal:
+      #black:   '0x282c34'
+      #red:     '0xff6c6b'
+      #green:   '0x98be65'
+      #yellow:  '0xecbe7b'
+      #blue:    '0x51afef'
+      #magenta: '0xc678dd'
+      #cyan:    '0x46d9ff'
+      #white:   '0xbbc2cf'
