@@ -536,8 +536,6 @@
     </keybind>
     <keybind key="A-r">
       <action name="Resize"/>
-      <x>55</x>
-      <width>50%</width>
     </keybind>
     <keybind key="A-m">
       <action name="Move"/>
