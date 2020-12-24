@@ -2,7 +2,7 @@
 window.active.title.bg.color: #55745F
 #99cc99
 window.inactive.title.bg.color: #748B7D
-window.*.label.text.color: #474c57
+window.*.label.text.color: #545865
 window.*.button.*.image.color: #474c57
 
 # Borders
@@ -43,11 +43,11 @@ menu.*.active.text.color:               #282c37
 menu.*.active.bg.color:                 #5a74ca
 
 # OSD
-osd.border.width: 1
-osd.border.color: #99cc99
+osd.border.width: 2 
+osd.border.color: #55745F
 osd.bg: flat solid
-osd.bg.color: #ffffff
+osd.bg.color: #282C34
 osd.label.bg: flat solid
-osd.label.bg.color: #ffffff
+osd.label.bg.color: #282C34
 osd.hilight.bg: flat solid
 osd.hilight.bg.color: #99cc99

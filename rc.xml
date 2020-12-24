@@ -23,7 +23,7 @@
        mouse into it, also raise the window -->
   </focus>
   <placement>
-    <policy>UnderMouse</policy>
+    <policy>Smart</policy>
     <!-- 'Smart' or 'UnderMouse' -->
     <center>yes</center>
     <!-- whether to place windows in the center of the free area found or
@@ -40,8 +40,8 @@
                     'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Arrondie-Violet</name>
-    <titleLayout>CILD</titleLayout>
+    <name>My-Arrondie-Tea</name>
+    <titleLayout>DC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
       N: window icon
@@ -52,7 +52,7 @@
       S: shade (roll up/down)
       D: omnipresent (on all desktops).
   -->
-    <keepBorder>yes</keepBorder>
+    <keepBorder>no</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
       <name>Noto Sans</name>
@@ -277,10 +277,18 @@
       </action>
     </keybind>
     <keybind key="A-Tab">
-      <!--<action name="NextWindow"/> -->
-      <action name="Execute">
-        <command>rofi -show window icon-theme "Surfn" -show-icons -font "hack 12" -theme Arc-Dark-Froly</command>
+      <action name="NextWindow">
+        <finalactions>
+          <action name="Raise" />
+          <action name="Focus" />
+        </finalactions>
+        <raise>yes</raise>
+        <bar>no</bar>
+        <dialog>icons</dialog>
       </action>
+        <!--><action name="Execute">
+        <!--><command>rofi -show window icon-theme "Surfn" -show-icons -font "hack 12" -theme Arc-Dark-Froly</command>-->
+      <!--</action>-->
     </keybind>
     <keybind key="A-S-Tab">
       <action name="PreviousWindow"/>
@@ -528,6 +536,8 @@
     </keybind>
     <keybind key="A-r">
       <action name="Resize"/>
+      <x>55</x>
+      <width>50%</width>
     </keybind>
     <keybind key="A-m">
       <action name="Move"/>
@@ -1186,6 +1196,9 @@
         <monitor>1</monitor>
       </position>
       <fullscreen>yes</fullscreen>
+    </application>
+    <application name="cavalcade">
+      <decor>no</decor>
     </application>
   </applications>
 </openbox_config>
