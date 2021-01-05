@@ -40,6 +40,6 @@ alias doomupg='cd ~/.emacs.d/bin/ &&
 alias doomdoctor='cd ~/.emacs.d/bin &&
 			./doom doctor ; back'
 # built-in to pwd on cd change
-chpwd() ls
+chpwd() la
 
-~/Programming/shell-scripts/termstart.sh
+ ~/Programming/shell-scripts/termstart.sh

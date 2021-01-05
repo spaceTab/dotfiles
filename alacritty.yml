@@ -28,7 +28,7 @@ font:
     style:  Regular 
     
   bold:
-    family: Iosevka 
+    family: Iosevka Term
     style:  Bold
 
   italic:
