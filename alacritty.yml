@@ -1,10 +1,10 @@
 window:
     dimensions:
-        columns: 83
-        lines: 27
+        columns: 93
+        lines:   23
     padding:
-      x: 30
-      y: 40
+      x: 20
+      y: 15 
     dynamic_padding: true
     
 # Background Opacity
@@ -23,11 +23,12 @@ background_opacity: 0.9
 font:
   normal:
     #family: "Hack 15"
-    family: SauceCodePro Nerd Font 
+    #family: SauceCodePro Nerd Font 
+    family: Iosevka Term
     style:  Regular 
     
   bold:
-    family: Hack 
+    family: Iosevka 
     style:  Bold
 
   italic:
@@ -39,7 +40,7 @@ font:
     style:  Bold Italic
 
 # Point Size of font
-  size: 11.0
+  size: 12.0
 
   offset:
     x: 0 
