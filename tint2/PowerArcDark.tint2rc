@@ -125,19 +125,19 @@ systray_name_filter =
 
 #-------------------------------------
 # Launcher
-#launcher_padding = 10 0 15
-#launcher_background_id = 2
-#launcher_icon_background_id = 0
-#launcher_icon_size = 20
-#launcher_icon_asb = 100 0 0
-#launcher_icon_theme = Surfn Majestic 
-#launcher_icon_theme_override = 1
-#startup_notifications = 0
-#launcher_tooltip = 1
-#launcher_item_app = ~/.local/share/applications/prev.desktop
-#launcher_item_app = ~/.local/share/applications/stop.desktop
-#launcher_item_app = ~/.local/share/applications/play-pause.desktop
-#launcher_item_app = ~/.local/share/applications/next.desktop
+launcher_padding = 10 0 15
+launcher_background_id = 2
+launcher_icon_background_id = 0
+launcher_icon_size = 20
+launcher_icon_asb = 100 0 0
+launcher_icon_theme = Surfn Majestic 
+launcher_icon_theme_override = 1
+startup_notifications = 0
+launcher_tooltip = 1
+launcher_item_app = ~/.local/share/applications/prev.desktop
+launcher_item_app = ~/.local/share/applications/stop.desktop
+launcher_item_app = ~/.local/share/applications/play-pause.desktop
+launcher_item_app = ~/.local/share/applications/next.desktop
 
 #-------------------------------------
 # Clock
@@ -189,8 +189,9 @@ execp_cache_icon = 1
 execp_continuous = 0
 execp_markup = 1
 execp_tooltip = Menu
-#execp_lclick_command = dmenu_run -i -fn 'Nerd Font:size=9' -x 10 -y 40 -w 350 -p 'Search ' -nb '#2f343f' -nf '#e7e8eb' -sb '#2f343f' -sf '#5294E2' -o 0.9 -h 30 -l 5 -b
-execp_lclick_command = dmenu_run -i -fn 'Nerd Font:size=9' -p 'Search ' -nb '#2f343f' -nf '#e7e8eb' -sb '#2f343f' -sf '#5294E2' -o 0.9 -h 30 -l 5 -b
+#execp_lclick_command = dmenu_run -i -fn 'Nerd Font:size=9' -x 10 -y 40 -z 350 -p 'Search ' -nb '#2f343f' -nf '#e7e8eb' -sb '#2f343f' -sf '#5294E2' -o 0.9 -h 30 -l 5 -b
+#execp_lclick_command = dmenu_run -i -fn 'Nerd Font:size=9' -p 'Search ' -nb '#2f343f' -nf '#e7e8eb' -sb '#2f343f' -sf '#5294E2' -o 0.9 -b
+execp_lclick_command = $HOME/.config/rofi/launchers/misc/launcher.sh
 execp_rclick_command = 
 execp_mclick_command = 
 execp_uwheel_command = 
@@ -237,8 +238,6 @@ execp_cache_icon = 1
 execp_continuous = 0
 execp_markup = 1
 execp_tooltip = Now Playing....
-#execp_lclick_command = urxvt -geometry 70x10 -e ncmpcpp -c ~/.ncmpcpp/ncmpcpp2
-#execp_rclick_command = /media/omar/Pribadi/MFO/Coding/mpd-popup
 execp_lclick_command = dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 execp_rclick_command = dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
 execp_mclick_command = 

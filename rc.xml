@@ -40,8 +40,8 @@
                     'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>My-Arrondie-Tea</name>
-    <titleLayout>DC</titleLayout>
+    <name>Tricky</name>
+    <titleLayout>IDC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
       N: window icon
@@ -52,7 +52,7 @@
       S: shade (roll up/down)
       D: omnipresent (on all desktops).
   -->
-    <keepBorder>no</keepBorder>
+    <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
       <name>Noto Sans</name>
@@ -276,20 +276,9 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="A-Tab">
-      <action name="NextWindow">
-        <finalactions>
-          <action name="Raise" />
-          <action name="Focus" />
-        </finalactions>
-        <raise>yes</raise>
-        <bar>no</bar>
-        <dialog>icons</dialog>
-      </action>
-        <!--><action name="Execute">
-        <!--><command>rofi -show window icon-theme "Surfn" -show-icons -font "hack 12" -theme Arc-Dark-Froly</command>-->
-      <!--</action>-->
-    </keybind>
+    <keybind key="A-Tab"><action name="NextWindow"><finalactions><action name="Raise"/><action name="Focus"/></finalactions><raise>yes</raise><bar>no</bar><dialog>icons</dialog></action><!--><action name="Execute">
+        <!--><command>rofi -show window icon-theme "Surfn" -show-icons -font "hack 12" -theme Arc-Dark-Froly</command>--&gt;
+      <!--</action>--></keybind>
     <keybind key="A-S-Tab">
       <action name="PreviousWindow"/>
     </keybind>
@@ -648,7 +637,7 @@
     </keybind>
     <keybind key="W-F11">
       <action name="Execute">
-        <command>rofi -show run -fullscreen -font "Noto Sans 13"</command>
+        <command>~/.config/rofi/bin/launcher_colorful</command>
       </action>
     </keybind>
     <keybind key="W-F12">
@@ -791,6 +780,11 @@
         <command>conky-rotate -p</command>
       </action>
     </keybind>
+    <keybind key="W-R">
+      <action name="Execute">
+        <command>~/.config/rofi/bin/launcher_colorful</command>
+      </action>
+    </keybind> 
   </keyboard>
   <mouse>
     <dragThreshold>8</dragThreshold>

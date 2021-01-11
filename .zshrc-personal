@@ -43,3 +43,11 @@ alias doomdoctor='cd ~/.emacs.d/bin &&
 chpwd() la
 
  ~/Programming/shell-scripts/termstart.sh
+
+ # Lazy Git function
+
+ function lazygit() {
+	 git add .
+	 git commit -a -m "$1"
+	 git push
+ }
