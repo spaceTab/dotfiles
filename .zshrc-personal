@@ -1,13 +1,13 @@
 #!/bin/zsh
 
 # Navigation
-alias scr='~/Programming/shell-scripts'
-alias pro='~/Programming'
+alias scr='~/Code/shell-scripts'
+alias code='~/Code'
 alias pics='~/Pictures'
 alias dls='~/Downloads'
 alias doc='~/Documents'
 alias music='~/Music'
-alias dots='~/dotfiles'
+alias dots='~/Code/dotfiles'
 # Basic commands
 alias cb='cd ..'
 alias nv='nvim'
@@ -19,12 +19,17 @@ alias mkd='mkdir -v'
 alias mkf='touch'
 alias back='cd -'
 alias .conf='~/.config/'
-alias lshare='~/.local/share/'
 alias cp="cp -ivr"
+alias ka="killall"
+alias cat="echo 'replacing cat with Bat \n' && bat"
+alias grep="echo 'use command rg instead \n' && rg"
+
+# Check age of installation ( Arch )
+alias age="head -n1 /var/log/pacman.log"
 # Scripts // Apps
 alias rl='~/Applications ; ./RuneLite.AppImage &;
 	disown ./RuneLite; back ; exit'
-alias convert='~/Programming/shell-scripts/convertRename.sh'
+alias convert='~/Code/shell-scripts/convertRename.sh'
 
 #global NPM Server
 alias server='browser-sync start --server --files'
@@ -42,7 +47,7 @@ alias doomdoctor='cd ~/.emacs.d/bin &&
 # built-in to pwd on cd change
 chpwd() la
 
- ~/Programming/shell-scripts/termstart.sh
+ ~/Code/shell-scripts/termstart.sh
 
  # Lazy Git function
 
