@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
+  <menu id="root-menu" label="Openbox 3">
+	    
+    <separator />
+    <item label="term">
+	    <action name="Execute">
+		    <command>exo-open --launch TerminalEmulator</command>
+	    </action>
+    </item>
+
+    <item label="www">
+	    <action name="Execute">
+            <command>exo-open --launch WebBrowser</command>
+        </action>
+    </item>
+
+    <menu id="files" label="files">
+        <item label="gui">
+            <action name="Execute">
+                <command>exo-open --launch FileManager</command>
+            </action>
+        </item>
+        
+        <item label="term">
+	        <action name="Execute">
+		        <command>kitty ranger</command>
+	        </action>
+        </item>
+    </menu>
+
+    <menu id="sys" label="sys">
+
+        <menu id="openbox" label= "openbox">
+
+            <item label="restart">
+                <action name="Execute">
+                    <command>openbox --restart</command>
+                </action>
+            </item>
+
+            <item label="reconfigure">
+                <action name="Execute">
+                    <command>openbox --reconfigure</command>
+                </action>
+            </item>
+
+            <item label="obconf">
+                <action name="Execute">
+                    <command>obconf</command>
+                </action>
+            </item>
+
+            <item label="config">
+                <action name="Execute">
+                    <command>emacsclient -nc /home/pg/.config/openbox/rc.xml</command>
+                </action>
+            </item>
+
+            <item label="autostart">
+                <action name="Execute">
+                    <command>emacsclient -nc /home/pg/.config/openbox/autostart</command>
+                </action>
+            </item>
+        </menu>
+
+        <menu id="tint2" label="tint2">
+            <item label="restart">
+                <action name="Execute">
+                    <command>/home/pg/.config/openbox/scripts/tint2-toggle.sh</command>
+                </action>
+            </item>
+
+            <item label="tint2conf">
+                <action name="Execute">
+                    <command>tint2conf</command>
+                </action>
+            </item>
+        </menu>
+
+        <menu id="picom" label="picom">
+            <item label="toggle">
+                <action name="Execute">
+                    <command>/home/pg/.config/openbox/scripts/picom-toggle.sh</command>
+                </action>
+            </item>
+
+            <item label="edit">
+                <action name="Execute">
+                    <command> kitty nvim /home/pg/.config/picom.conf</command>
+                </action>
+            </item>
+        </menu> 
+
+        <item label="settings">
+            <action name="Execute">
+                <command>xfce4-settings-manager</command>
+            </action>
+        </item>
+        
+
+        <item label="kernel">
+            <action name="Execute">
+                <command> notify-send "$(uname -r)"</command>
+            </action>
+        </item>
+    </menu>
+    
+    <separator />
+    <item label="goodbye">
+        <action name="Execute">
+            <command>arcolinux-logout</command>
+        </action>
+    </item>
+    
+    
+
+  </menu>
+</openbox_menu>
