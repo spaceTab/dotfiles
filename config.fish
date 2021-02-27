@@ -17,7 +17,6 @@ set fish_color_param brcyan
 
 
 # aliases
-
 alias ..="cd .."
 alias ...="cd ..."
 alias chx="chmod +x"
@@ -27,6 +26,7 @@ alias mkf="touch"
 alias mkd="mkdir -v"
 alias cat="echo 'REPLACING CAT WITH BAT\n' && bat"
 alias grep="echo 'REPLACING GREP WITH RG\n' && rg"
+alias psyu="sudo pacman -Syu"
 
 alias scr="cd ~/Code/shell-scripts/"
 alias code="cd ~/Code"
@@ -50,9 +50,6 @@ alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 
-
-#pfetch
-
 #~/Code/shell-scripts/termstart.sh
 
 function cd
@@ -66,14 +63,13 @@ end
 function fish_greeting
 	pfetch
 end
-funcsave fish_greeting
 
 function lazyGit
 	git add .
-	read $argv
 	git commit -m -l $argv
 	git push
 end
-funcsave lazyGit
 
+funcsave lazyGit
+funcsave fish_greeting
 
