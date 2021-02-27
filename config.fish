@@ -53,10 +53,19 @@ alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 
 function lazyGit
 	git add . 
-	git commit -m "$1"
+	git commit -m $1
 	git push
 end
 
 #pfetch
 
 #~/Code/shell-scripts/termstart.sh
+
+function cd
+    if count $argv > /dev/null
+        builtin cd "$argv"; and ls
+    else
+        builtin cd ~; and ls
+    end
+end
+
