@@ -51,12 +51,6 @@ alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 
 
-function lazyGit
-	git add . 
-	git commit -m $1
-	git push
-end
-
 #pfetch
 
 #~/Code/shell-scripts/termstart.sh
@@ -68,4 +62,18 @@ function cd
         builtin cd ~; and ls
     end
 end
+
+function fish_greeting
+	pfetch
+end
+funcsave fish_greeting
+
+function lazyGit
+	git add .
+	read $argv
+	git commit -m -l $argv
+	git push
+end
+funcsave lazyGit
+
 
