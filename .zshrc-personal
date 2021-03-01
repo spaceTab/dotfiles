@@ -9,8 +9,8 @@ alias doc='~/Documents'
 alias music='~/Music'
 alias dots='~/Code/dotfiles'
 # Basic commands
-alias cb='cd ..'
-alias nv='nvim'
+alias ..='cd ..'
+alias ...='cd ../..'
 alias pac='sudo pacman'
 alias chx='chmod +x'
 alias ch755='chmod +755'
@@ -21,11 +21,12 @@ alias back='cd -'
 alias .conf='~/.config/'
 alias cp="cp -ivr"
 alias ka="killall"
-alias cat="echo 'replacing cat with Bat \n' && bat"
-alias grep="echo 'use command rg instead \n' && rg"
+alias cat="echo 'REPLACING CAT WITH BAT\n' && bat"
+alias grep="echo 'REPLACING GREP WITH RG\n' && rg"
 
 # Check age of installation ( Arch )
 alias age="head -n1 /var/log/pacman.log"
+
 # Scripts // Apps
 alias rl='~/Applications ; ./RuneLite.AppImage &;
 	disown ./RuneLite; back ; exit'
@@ -44,15 +45,41 @@ alias doomupg='cd ~/.emacs.d/bin/ &&
 	  ./doom upgrade ; back'
 alias doomdoctor='cd ~/.emacs.d/bin &&
 			./doom doctor ; back'
+
+# Neovim / Neovim related
+alias nv='nvim'
+alias nplug='nvim +PlugInstall'
+
+#Quickly change shells
+alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
+alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
+alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
+
 # built-in to pwd on cd change
-chpwd() la
+chpwd() ls -a
 
- ~/Code/shell-scripts/termstart.sh
+# environment variables
+export CON=/home/pg/.config
 
- # Lazy Git function
+# Colored Man pages
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;31m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;32m'
 
- function lazygit() {
+# Lazy Git function
+function lazygit() {
 	 git add .
 	 git commit -a -m "$1"
 	 git push
  }
+
+
+#randomly choose a 'image' to display on load
+/home/pg/Code/shell-scripts/termstart.sh
+
+
+

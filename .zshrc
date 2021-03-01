@@ -11,7 +11,8 @@ export ZSH=/usr/share/oh-my-zsh/
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="trapd00r"
+#ZSH_THEME="agnoster"
+ZSH_THEME="avit"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -45,7 +46,7 @@ ZSH_THEME="trapd00r"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -72,6 +73,10 @@ ZSH_THEME="trapd00r"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
+plugins=(autojump)
+plugins=(colored-man-pages)
+plugins=(compleat)
+plugins=(zsh-interactive-cd)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -216,7 +221,7 @@ alias vbm="sudo /usr/local/bin/arcolinux-vbox-share"
 #shopt -s dotglob
 #shopt -s histappend # do not overwrite history
 #shopt -s expand_aliases # expand aliases
-
+#
 #youtube-dl
 alias yta-aac="youtube-dl --extract-audio --audio-format aac "
 alias yta-best="youtube-dl --extract-audio --audio-format best "
@@ -240,7 +245,7 @@ alias iso="cat /etc/dev-rel | awk -F '=' '/ISO/ {print $2}'"
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
 
 #get the error messages from journalctl
-alias jctl="journalctl -p 3 -xb"
+#alias jctl="journalctl -p 3 -xb"
 
 #nano for important configration files
 #know what you do in these files
@@ -265,7 +270,7 @@ alias sr="sudo reboot"
 
 #maintenance
 alias big="expac -H M '%m\t%n' | sort -h | nl"
-alias downgrada="sudo downgrade --ala-url https://bike.seedhost.eu/arcolinux/"
+alias downgrada="downgrade --ala-url 'https://bike.seedhost.eu/arcolinux/'"
 
 #systeminfo
 alias probe="sudo -E hw-probe -all -upload"
@@ -301,6 +306,6 @@ ex ()
 
 [[ -f ~/.zshrc-personal ]] && . ~/.zshrc-personal
 
-#neofetch
 
-eval "$(starship init zsh)"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+alias ag='ag --path-to-ignore ~/.ignore'
