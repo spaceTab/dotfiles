@@ -31,9 +31,25 @@ call plug#begin("~/.vim/plugged")
   Plug 'prettier/vim-prettier', { 'do': 'npm -g install' }
 
   " Auto Pair
-  Plug 'jiangmiao/auto-pairs'
+"  Plug 'jiangmiao/auto-pairs'
 
   " Python Autoformat
   Plug 'sbdchd/neoformat'
 
+
+" FLOATERM
+  Plug 'voldikss/vim-floaterm'
+
+" WHICH KEY - keybinding guide
+  Plug 'liuchengxu/vim-which-key'
+  " On demand lazy load
+"  Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+
+" Ranger integration vim
+  Plug 'francoiscabrol/ranger.vim'
+  " Ranger dependancy for neovim
+  Plug 'rbgrouleff/bclose.vim'
+
+" NERD Commentor - make comments easier
+  Plug 'preservim/nerdcommenter'
 call plug#end()
