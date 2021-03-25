@@ -11,7 +11,7 @@ alias dots='~/Code/dotfiles'
 # Basic commands
 alias ..='cd ..'
 alias ...='cd ../..'
-alias pac='sudo pacman'
+alias updateable='pacman -Qu'
 alias chx='chmod +x'
 alias ch755='chmod +755'
 alias rmr='sudo rm -r'
@@ -55,11 +55,13 @@ alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 
+
 # built-in to pwd on cd change
 chpwd() ls -a
 
 # environment variables
 export CON=/home/pg/.config
+export NVI=/home/pg/.config/nvim/config
 
 # Colored Man pages
 export LESS_TERMCAP_mb=$'\E[01;31m'
@@ -77,9 +79,8 @@ function lazygit() {
 	 git push
  }
 
-
+printf '\n%.0s' {1..100}
 #randomly choose a 'image' to display on load
 /home/pg/Code/shell-scripts/termstart.sh
-
 
 

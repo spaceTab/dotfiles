@@ -1,6 +1,151 @@
+<!--@format-->
 <?xml version="1.0" encoding="utf-8"?>
 <openbox_menu xmlns="http://openbox.org/"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://openbox.org/">
-    <menu id="root-menu" label="obmenu-generator" execute="/usr/bin/obmenu-generator" />
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://openbox.org/ file:///usr/share/openbox/menu.xsd">
+
+  <menu id="root-menu" label="Openbox 3">
+    <separator />
+    <item label="term">
+      <action name="Execute">
+        <command>exo-open --launch TerminalEmulator</command>
+      </action>
+    </item>
+    <item label="code">
+      <action name="Execute">
+        <command>kitty nvim</command>
+      </action>
+    </item>
+    <item label="www">
+      <action name="Execute">
+        <command>exo-open --launch WebBrowser</command>
+      </action>
+    </item>
+    <item label="papes">
+      <action name="Execute">
+        <command>variety --selector</command>
+      </action>
+    </item>
+    <menu id="files" label="files">
+      <item label="thunar">
+        <action name="Execute">
+          <command>exo-open --launch FileManager</command>
+        </action>
+      </item>
+      <item label="ranger">
+        <action name="Execute">
+			<command>/home/pg/Code/shell-scripts/openranger.sh</command>
+        </action>
+      </item>
+    </menu>
+    <separator />
+    <!--
+        SYSTEM SETTINGS NESTED MENUS
+    -->
+    <menu id="sys" label="sys">
+      <menu id="openbox" label="openbox">
+        <menu id="openbox-edit" label="edit">
+          <item label="rc.xml">
+            <action name="Execute">
+              <command>kitty nvim 
+              /home/pg/.config/openbox/rc.xml</command>
+            </action>
+          </item>
+          <item label="autostart">
+            <action name="Execute">
+              <command>kitty nvim 
+              /home/pg/.config/openbox/autostart</command>
+            </action>
+          </item>
+          <item label="menu">
+            <action name="Execute">
+              <command>kitty nvim 
+              /home/pg/.config/openbox/menu.xml</command>
+            </action>
+          </item>
+        </menu>
+        <item label="restart">
+          <action name="Execute">
+            <command>openbox --restart</command>
+          </action>
+        </item>
+        <item label="reconfigure">
+          <action name="Execute">
+            <command>openbox --reconfigure</command>
+          </action>
+        </item>
+        <item label="obconf">
+          <action name="Execute">
+            <command>obconf</command>
+          </action>
+        </item>
+      </menu>
+      <menu id="tint2" label="tint2">
+        <item label="restart">
+          <action name="Execute">
+            <command>
+            /home/pg/.config/openbox/scripts/tint2-toggle.sh</command>
+          </action>
+        </item>
+        <item label="tint2conf">
+          <action name="Execute">
+            <command>tint2conf</command>
+          </action>
+        </item>
+        <item label="kill tint2">
+          <action name="Execute">
+            <command>killall tint2</command>
+          </action>
+        </item>
+      </menu>
+      <menu id="picom" label="picom">
+        <item label="toggle">
+          <action name="Execute">
+            <command>
+            /home/pg/.config/openbox/scripts/picom-toggle.sh</command>
+          </action>
+        </item>
+        <item label="edit">
+          <action name="Execute">
+            <command>kitty nvim /home/pg/.config/picom.conf</command>
+          </action>
+        </item>
+      </menu>
+      <menu id="editors" label="editors">
+		  <menu id="Doom Emacs" label="Doom Emacs">
+        	<item label="config">
+          		<action name="Execute">
+            		<command>kitty nvim /home/pg/.doom.d/config.el</command>
+          		</action>
+        	</item>
+        	<item label="init.el">
+          		<action name="Execute">
+            		<command>kitty nvim /home/pg/.doom.d/init.el</command>
+           		</action>
+        	</item>
+		</menu>
+		<item label="neovim">
+			<action name="Execute">
+				<command> kitty nvim /home/pg/.config/nvim/init.vim </command>
+			</action>
+		</item>
+      </menu>
+      <item label="settings">
+        <action name="Execute">
+          <command>xfce4-settings-manager</command>
+        </action>
+      </item>
+      <item label="kernel">
+        <action name="Execute">
+          <command>notify-send "$(uname -r)"</command>
+        </action>
+      </item>
+      <item label="goodbye">
+        <action name="Execute">
+          <command>arcolinux-logout</command>
+        </action>
+      </item>
+    </menu>
+    <separator />
+  </menu>
 </openbox_menu>

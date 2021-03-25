@@ -309,3 +309,6 @@ ex ()
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 alias ag='ag --path-to-ignore ~/.ignore'
+
+export EDITOR=nvim;
+export VISUAL=nvim;

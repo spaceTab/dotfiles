@@ -182,7 +182,8 @@ ac_disconnected_cmd =
 #-------------------------------------
 # Executor 1
 execp = new
-execp_command = echo ""
+#execp_command = echo ""
+execp_command = echo "⮝"
 execp_interval = 0
 execp_has_icon = 0
 execp_cache_icon = 1
@@ -196,9 +197,9 @@ execp_rclick_command =
 execp_mclick_command = 
 execp_uwheel_command = 
 execp_dwheel_command = 
-execp_font = mplus Nerd Font Bold 12
+execp_font = mplus Nerd Font Bold 11
 execp_font_color = #202628 100
-execp_padding = 15 0
+execp_padding = 15 20
 execp_background_id = 2
 execp_centered = 0
 execp_icon_w = 0

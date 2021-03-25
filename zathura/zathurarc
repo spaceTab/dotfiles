@@ -1,0 +1,18 @@
+set selection-clipboard clipboard
+
+set adjust-open "best-fit"
+
+
+set default-bg "#1C1C25"
+set default-fg "#2F343F"
+set statusbar-fg "#A28AD2"
+set statusbar-bg "#1C1C25"
+set font "Iosevka 10"
+
+set recolor "true"
+set recolor-lightcolor "#000000" #00
+set recolor-darkcolor "#E0E0E0" #06
+set recolor-reverse-video "true"
+set recolor-keephue "true"
+
+set completion-bg "#303030" #02

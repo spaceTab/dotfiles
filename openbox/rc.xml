@@ -227,12 +227,6 @@
     <keybind key="S-A-Right">
       <action name="SendToDesktopRight"/>
     </keybind>
-    <keybind key="S-A-Up">
-      <action name="SendToDesktopUp"/>
-    </keybind>
-    <keybind key="S-A-Down">
-      <action name="SendToDesktopDown"/>
-    </keybind>
     <keybind key="A-Escape">
       <action name="Lower"/>
       <action name="FocusToBottom"/>
@@ -366,16 +360,11 @@
         <menu>client-list-combined-menu</menu>
       </action>
     </keybind>
-    <!--<keybind key="W-space">
-      <action name="ShowMenu">
-        <menu>root-menu</menu>
-      </action>
-    </keybind> -->
     <keybind key="W-Right">
       <action name="UnmaximizeFull"/>
       <action name="MaximizeVert"/>
       <action name="MoveResizeTo">
-        <width>49%</width>
+        <width>50%</width>
       </action>
       <action name="MoveToEdgeEast"/>
     </keybind>
@@ -383,7 +372,7 @@
       <action name="UnmaximizeFull"/>
       <action name="MaximizeVert"/>
       <action name="MoveResizeTo">
-        <width>49%</width>
+        <width>50%</width>
       </action>
       <action name="MoveToEdgeWest"/>
     </keybind>
@@ -478,7 +467,7 @@
     </keybind>
     <keybind key="W-space">
       <action name="Execute">
-        <command>~/.config/rofi/bin/launcher_colorful</command>
+        <command>~/.config/rofi/bin/launcher_text</command>
       </action>
     </keybind>
     <!-- Binding connection and disconnects for my BT-Speakers -->
@@ -531,43 +520,46 @@
         <to>4</to>
       </action>
     </keybind>
-
-<!-- Move winndows to preset tile -->
-    <keybind key="A-1"> <!-- move window to position 1 -->
-        <action name="MoveResizeTo"> 
-            <monitor>1</monitor>
-            <x>20</x>
-            <y>20</y>
-            <width>930</width>
-            <height>1020</height>
-        </action>
+    <!-- Move winndows to preset tile -->
+    <keybind key="A-1">
+      <!-- move window to position 1 -->
+      <action name="MoveResizeTo">
+        <monitor>1</monitor>
+        <x>20</x>
+        <y>20</y>
+        <width>930</width>
+        <height>1020</height>
+      </action>
     </keybind>
-    <keybind key="A-2"> <!-- move window to position 2 -->
-        <action name="MoveResizeTo"> 
-            <monitor>1</monitor>
-            <x>970</x>
-            <y>20</y>
-            <width>930</width>
-            <height>1020</height>
-        </action>
+    <keybind key="A-2">
+      <!-- move window to position 2 -->
+      <action name="MoveResizeTo">
+        <monitor>1</monitor>
+        <x>970</x>
+        <y>20</y>
+        <width>930</width>
+        <height>1020</height>
+      </action>
     </keybind>
-    <keybind key="A-3"> <!-- move window to position 5 -->
-        <action name="MoveResizeTo"> 
-            <monitor>1</monitor>
-            <x>970</x>
-            <y>20</y>
-            <width>930</width>
-            <height>505</height>
-        </action>
+    <keybind key="A-3">
+      <!-- move window to position 5 -->
+      <action name="MoveResizeTo">
+        <monitor>1</monitor>
+        <x>970</x>
+        <y>20</y>
+        <width>930</width>
+        <height>505</height>
+      </action>
     </keybind>
-    <keybind key="A-4"> <!-- move window to position 6 -->
-        <action name="MoveResizeTo"> 
-			<monitor>1</monitor>
-            <x>970</x>
-            <y>540</y>
-            <width>930</width>
-            <height>505</height>
-        </action>
+    <keybind key="A-4">
+      <!-- move window to position 6 -->
+      <action name="MoveResizeTo">
+        <monitor>1</monitor>
+        <x>970</x>
+        <y>540</y>
+        <width>930</width>
+        <height>505</height>
+      </action>
     </keybind>
   </keyboard>
   <!-- KEYBOARD END -->

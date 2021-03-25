@@ -11,12 +11,19 @@ set autoindent
 set smartindent 
 set hlsearch
 
+filetype plugin indent on
+
 " Give mouse support
 " Left Click  - Insert
 " Right Click - Visual 
 if has('mouse')  
 	set mouse=a
 endif
+
+
+
+
+
 
 """"""""""""""""""""""
 "    COLOR SCHEMES   "

@@ -52,4 +52,11 @@ call plug#begin("~/.vim/plugged")
 
 " NERD Commentor - make comments easier
   Plug 'preservim/nerdcommenter'
+
+
+" General Rust Plugin -- format/file-detect/syntax-hl/syntastic integration
+  Plug 'rust-lang/rust.vim'
+
+" indent lines
+  Plug 'Yggdroot/indentline' 
 call plug#end()

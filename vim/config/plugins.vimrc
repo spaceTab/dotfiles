@@ -32,7 +32,9 @@ let g:airline_powerline_fonts = 1
 """"""""""""""""""""""
 "    Formatting      "
 """"""""""""""""""""""
-let g:prettier#autoformat = 1            " Prettier Formatting
+let g:prettier#autoformat = 1                 " Prettier Formatting
+let g:prettier#config#single_quote = 'true'   " Potential fix for failed parsing
+let g:prettier#config#trailing_comma = 'all'
 
 let g:neoformat_basic_format_align = 1   " Python Autoformat
 let g:neoformat_basic_format_retab = 1   " Tab to space conversion
@@ -52,3 +54,9 @@ let g:floaterm_width = 0.8
 let g:floaterm_height = 0.8
 let g:floaterm_wintitle = 0
 let g:floaterm_autoclose = 1
+
+
+
+" Indent lines
+let g:indentLine_char = '|'
+
