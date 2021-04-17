@@ -8,6 +8,9 @@ alias dls='~/Downloads'
 alias doc='~/Documents'
 alias music='~/Music'
 alias dots='~/Code/dotfiles'
+alias hdd='/run/media/$USER/Storage/'
+alias removables='ls -l --color=auto /run/media/$USER/'
+#alias wdblack='/run/media/$USER/WD_BLACK'
 # Basic commands
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -21,8 +24,8 @@ alias back='cd -'
 alias .conf='~/.config/'
 alias cp="cp -ivr"
 alias ka="killall"
-alias cat="echo 'REPLACING CAT WITH BAT\n' && bat"
-alias grep="echo 'REPLACING GREP WITH RG\n' && rg"
+#alias cat="echo 'REPLACING CAT WITH BAT\n' && bat"
+#alias grep="echo 'REPLACING GREP WITH RG\n' && rg"
 
 # Check age of installation ( Arch )
 alias age="head -n1 /var/log/pacman.log"
@@ -41,8 +44,8 @@ alias sitedl='w3m -dump'
 # Commands to quickly access doom(emacs) scripts
 alias doomsync='cd ~/.emacs.d/bin/ &&
 	  ./doom sync ; back'
-alias doomupg='cd ~/.emacs.d/bin/ &&
-	  ./doom upgrade ; back'
+alias doomuj='cd ~/.emacs.d/bin/ &&
+	  ./doom ujrade ; back'
 alias doomdoctor='cd ~/.emacs.d/bin &&
 			./doom doctor ; back'
 
@@ -51,17 +54,19 @@ alias nv='nvim'
 alias nplug='nvim +PlugInstall'
 
 #Quickly change shells
-alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
-alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
-alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
+#alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
+#alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
+#alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 
 
 # built-in to pwd on cd change
 chpwd() ls -a
 
 # environment variables
-export CON=/home/pg/.config
-export NVI=/home/pg/.config/nvim/config
+export CON=/home/j/.config
+export NVI=/home/j/.config/nvim/config
+export WDBK=/run/media/$USER/WD_BLACK/
+export STORAGE=/run/media/$USER/Storage/
 
 # Colored Man pages
 export LESS_TERMCAP_mb=$'\E[01;31m'
@@ -79,8 +84,12 @@ function lazygit() {
 	 git push
  }
 
-printf '\n%.0s' {1..100}
-#randomly choose a 'image' to display on load
-/home/pg/Code/shell-scripts/termstart.sh
+function mkcd() {
+	mkdir $1
+	cd $1
+}
 
+#printf '\n%.0s' {1..100}
+#randomly choose a 'image' to display on load
+/home/j/Code/shell-scripts/termstart.sh
 

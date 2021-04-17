@@ -34,5 +34,5 @@ endif
 
 colorscheme nord
 
-hi Normal guibg=NONE ctermbg=NONE
+hi Normal guibg=#2F343F ctermbg=NONE
 
