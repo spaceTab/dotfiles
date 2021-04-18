@@ -6,10 +6,14 @@ title_horizontal_offset_=0
 title_vertical_offset_active=1
 title_vertical_offset_inactive=1
 
+active_text_color=#E7E8EB
+active_text_shadow_color=#E7E8EB
+inactive_text_color=#E7E8EB
+inactive_text_shadow_color=#E7E8EB
 
-active_text_color=#0b1317
+#active_text_color=#0b1317
 
-inactive_text_color=#e7e8eb
+#inactive_text_color=#e7e8eb
 
 shadow_delta_y=0
 shadow_delta_x=0
