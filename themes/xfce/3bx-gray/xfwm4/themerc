@@ -15,7 +15,7 @@ shadow_delta_height=17
 shadow_delta_width=9
 shadow_delta_x=-20
 shadow_delta_y=-9
-shadow_opacity=65
+shadow_opacity=69
 
 # hide the app icon for concistency
 show_app_icon=false
