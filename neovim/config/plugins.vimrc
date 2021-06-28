@@ -26,8 +26,8 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 """"""""""""""""""""""
 "    Airline Bar     "
 """"""""""""""""""""""
-let g:airline_theme = 'deus'
-let g:airline_powerline_fonts = 1
+let g:airline_theme = 'ayu_mirage'
+let g:airline_powerline_fonts = 0
 
 """"""""""""""""""""""
 "    Formatting      "
@@ -56,7 +56,16 @@ let g:floaterm_wintitle = 0
 let g:floaterm_autoclose = 1
 
 
-
 " Indent lines
 let g:indentLine_char = '|'
 
+" Bracey
+let g:bracey_refresh_on_save = 1
+
+
+" BARBAR - Tabs
+let bufferline = get(g:, 'bufferline', {})
+let bufferline.animation = v:true
+let bufferline.clickable = v:true
+let bufferline.icons     = v:true
+let bufferline.icon_custom_colors = v:false

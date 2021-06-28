@@ -3,6 +3,8 @@ call plug#begin("~/.vim/plugged")
 " Colorschemes
     Plug 'dracula/vim'
     Plug 'arcticicestudio/nord-vim'
+	Plug 'joshdick/onedark.vim'
+	Plug 'Brettm12345/moonlight.vim'
 
 " Eyecandy
     Plug 'vim-airline/vim-airline'        " Bottom info-bar 
@@ -28,14 +30,10 @@ call plug#begin("~/.vim/plugged")
 
 " Formatting
   " Prettier Autoformat
-  Plug 'prettier/vim-prettier', { 'do': 'npm -g install' }
-
-  " Auto Pair
-"  Plug 'jiangmiao/auto-pairs'
+  Plug 'prettier/vim-prettier', { 'do': 'sudo npm -g install' }
 
   " Python Autoformat
   Plug 'sbdchd/neoformat'
-
 
 " FLOATERM
   Plug 'voldikss/vim-floaterm'
@@ -59,4 +57,13 @@ call plug#begin("~/.vim/plugged")
 
 " indent lines
   Plug 'Yggdroot/indentline' 
+
+" Live Server
+  Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
+
+" Tabs
+  Plug 'kyazdani42/nvim-web-devicons'
+  Plug 'romgrk/barbar.nvim'
+
+
 call plug#end()

@@ -21,18 +21,14 @@ if has('mouse')
 endif
 
 
-
-
-
-
 """"""""""""""""""""""
 "    COLOR SCHEMES   "
 """"""""""""""""""""""
 if (has("termguicolors"))
 	set termguicolors
 endif
+"set background=dark
+colorscheme onedark
 
-colorscheme nord
-
-hi Normal guibg=#2F343F ctermbg=NONE
+hi Normal guibg=NONE ctermbg=NONE
 
