@@ -22,7 +22,7 @@ alias mkd='mkdir -v'
 alias mkf='touch'
 alias back='cd -'
 alias .conf='~/.config/'
-alias cp="cp -ivr"
+alias cpr="cp -ivr"
 alias ka="killall"
 #alias cat="echo 'REPLACING CAT WITH BAT\n' && bat"
 #alias grep="echo 'REPLACING GREP WITH RG\n' && rg"
@@ -41,6 +41,7 @@ alias server='browser-sync start --server --files'
 # Download web-page contents in non-html format
 alias sitedl='w3m -dump'
 
+
 # Commands to quickly access doom(emacs) scripts
 alias doomsync='cd ~/.emacs.d/bin/ &&
 	  ./doom sync ; back'
@@ -53,12 +54,8 @@ alias doomdoctor='cd ~/.emacs.d/bin &&
 alias nv='nvim'
 alias nplug='nvim +PlugInstall'
 
-#Quickly change shells
-#alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
-#alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
-#alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 
-
+alias jack='/usr/lib/jackett/jackett'
 # built-in to pwd on cd change
 chpwd() ls -a
 
@@ -67,6 +64,9 @@ export CON=/home/j/.config
 export NVI=/home/j/.config/nvim/config
 export WDBK=/run/media/$USER/WD_BLACK/
 export STORAGE=/run/media/$USER/Storage/
+
+export EDITOR=nvim
+export VISUAL=nvim
 
 # Colored Man pages
 export LESS_TERMCAP_mb=$'\E[01;31m'
@@ -84,6 +84,10 @@ function lazygit() {
 	 git push
  }
 
+function yt-audio() {
+	youtube-dl --extract-audio --audio-format $1 --embed-thumbnail --add-metadata $2
+}
+
 function mkcd() {
 	mkdir $1
 	cd $1
@@ -91,5 +95,5 @@ function mkcd() {
 
 #printf '\n%.0s' {1..100}
 #randomly choose a 'image' to display on load
-/home/j/Code/shell-scripts/termstart.sh
+#/home/j/Code/shell-scripts/termstart.sh
 
