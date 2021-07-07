@@ -109,7 +109,7 @@ task_urgent_background_id = 0
 task_iconified_background_id = 0
 mouse_left = toggle_iconify
 mouse_middle = none
-mouse_right = none
+mouse_right = none 
 mouse_scroll_up = toggle
 mouse_scroll_down = iconify
 
@@ -130,7 +130,7 @@ launcher_background_id = 2
 launcher_icon_background_id = 0
 launcher_icon_size = 20
 launcher_icon_asb = 100 0 0
-launcher_icon_theme = Surfn Majestic 
+launcher_icon_theme = ePapirus 
 launcher_icon_theme_override = 1
 startup_notifications = 0
 launcher_tooltip = 1
@@ -158,26 +158,6 @@ clock_uwheel_command =
 clock_dwheel_command = 
 
 #-------------------------------------
-# Battery
-battery_tooltip = 1
-battery_low_status = 20
-battery_low_cmd = notify-send "battery low"
-battery_full_cmd = 
-bat1_font = mplus Nerd Font 11
-bat2_font = mPlus Nerd Font, 6
-battery_font_color = #b5b5b5 100
-bat1_format = 
-bat2_format = 
-battery_padding = 5 0
-battery_background_id = 0
-battery_hide = 101
-battery_lclick_command = 
-battery_rclick_command = 
-battery_mclick_command = 
-battery_uwheel_command = 
-battery_dwheel_command = 
-ac_connected_cmd = 
-ac_disconnected_cmd = 
 
 #-------------------------------------
 # Executor 1
@@ -191,13 +171,12 @@ execp_continuous = 0
 execp_markup = 1
 execp_tooltip = Applications
 #execp_lclick_command = dmenu_run -i -fn 'Nerd Font:size=9' -x 10 -y 40 -z 350 -p 'Search ' -nb '#1C1C25' -nf '#e7e8eb' -sb '#1C1C25' -sf '#5294E2' -o 0.9 -h 30 -l 5 -b
-#execp_lclick_command = dmenu_run -i -fn 'Nerd Font:size=9' -p 'Search ' -nb '#1C1C25' -nf '#e7e8eb' -sb '#1C1C25' -sf '#5294E2' -o 0.9 -b
-execp_lclick_command = $HOME/.config/rofi/launchers/misc/launcher.sh
-execp_rclick_command = 
+execp_lclick_command = rofi -show drun -theme sidebar -font "hack 11" -show combi 
+execp_rclick_command = rofi -show window -theme sidebar -font "hack 11" -show combi 
 execp_mclick_command = 
 execp_uwheel_command = 
 execp_dwheel_command = 
-execp_font = mplus Nerd Font Bold 11
+execp_font = mplus Nerd Font Bold 12
 execp_font_color = #202628 100
 execp_padding = 15 20
 execp_background_id = 2
@@ -403,12 +382,12 @@ execp_continuous = 0
 execp_markup = 1
 execp_tooltip = Google weather forcast
 #execp_lclick_command = firefox --search "my weather"
-execp_rclick_command = firefox https://www.accuweather.com/en/us/portsmouth/03801/weather-forecast/334460
+execp_rclick_command = chromium https://www.accuweather.com/en/us/portsmouth/03801/weather-forecast/334460
 execp_mclick_command = 
 execp_uwheel_command = 
 execp_dwheel_command = 
 execp_font_color = #ffffff 100
-execp_font = mPlus Nerd Font 20 
+execp_font = mPlus Nerd Font 22 
 execp_padding = 10 10
 execp_background_id = 1
 execp_centered = 0
