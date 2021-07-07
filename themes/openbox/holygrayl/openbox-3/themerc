@@ -106,7 +106,7 @@ menu.items.active.bg.color:  #1C1C25
 menu.items.active.text.color: #c5bad4
 
 # OSD
-osd.border.width: 3
+osd.border.width: 1
 osd.border.color: #73818c
 osd.bg: flat solid
 osd.bg.color: #1C1C25
