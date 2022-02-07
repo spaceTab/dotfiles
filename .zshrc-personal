@@ -24,8 +24,28 @@ alias back='cd -'
 alias .conf='~/.config/'
 alias cpr="cp -ivr"
 alias ka="killall"
+alias upp="uptime -p"
 #alias cat="echo 'REPLACING CAT WITH BAT\n' && bat"
 #alias grep="echo 'REPLACING GREP WITH RG\n' && rg"
+
+# quick-access for portables HDD
+#alias WDB='/run/media/$USER/WD_BLACK/'
+#alias STOR='/mnt/8e1a266a-26aa-4ece-8a5f-9e8c6cdec7c9/'
+
+# List current running services
+alias listserv="systemctl list-units --type=service"
+
+##################################
+# Kitty issues wiht 'terminfo'   #
+# breaking backspace change ssh  #
+# to builtin +kitten             #
+##################################
+alias ssh='kitty +kitten ssh'
+
+#SSH into media server
+alias sshmedia='kitty +kitten ssh server@192.168.1.31'
+#DigitalOcean server
+alias sshocean='kitty +kitten ssh use-python syschadmin@159.65.221.85'
 
 # Check age of installation ( Arch )
 alias age="head -n1 /var/log/pacman.log"
@@ -41,33 +61,41 @@ alias server='browser-sync start --server --files'
 # Download web-page contents in non-html format
 alias sitedl='w3m -dump'
 
+alias ytdl='youtube-dl --add-metadata'
+
 
 # Commands to quickly access doom(emacs) scripts
-alias doomsync='cd ~/.emacs.d/bin/ &&
-	  ./doom sync ; back'
-alias doomuj='cd ~/.emacs.d/bin/ &&
-	  ./doom ujrade ; back'
-alias doomdoctor='cd ~/.emacs.d/bin &&
-			./doom doctor ; back'
+#alias doomsync='cd ~/.emacs.d/bin/ &&
+	  #./doom sync ; back'
+#alias doomuj='cd ~/.emacs.d/bin/ &&
+	  #./doom ujrade ; back'
+#alias doomdoctor='cd ~/.emacs.d/bin &&
+			#./doom doctor ; back'
 
 # Neovim / Neovim related
 alias nv='nvim'
 alias nplug='nvim +PlugInstall'
+alias nclean='nvim +PlugInstall'
 
 
+# Starts jackett torrenting server
 alias jack='/usr/lib/jackett/jackett'
 # built-in to pwd on cd change
 chpwd() ls -a
+
+
+# ZSH THEMES I ENJOY
+#"refined" "sonicradish" "theunraveler"
 
 # environment variables
 export CON=/home/j/.config
 export NVI=/home/j/.config/nvim/config
 export WDBK=/run/media/$USER/WD_BLACK/
-export STORAGE=/run/media/$USER/Storage/
+export STOR=/mnt/8e1a266a-26aa-4ece-8a5f-9e8c6cdec7c9/
 
 export EDITOR=nvim
 export VISUAL=nvim
-
+export PW=/mnt/8e1a266a-26aa-4ece-8a5f-9e8c6cdec7c9/Documents/pword.txt
 # Colored Man pages
 export LESS_TERMCAP_mb=$'\E[01;31m'
 export LESS_TERMCAP_md=$'\E[01;31m'
@@ -84,16 +112,19 @@ function lazygit() {
 	 git push
  }
 
-function yt-audio() {
+function yt-aud() {
 	youtube-dl --extract-audio --audio-format $1 --embed-thumbnail --add-metadata $2
+}
+
+function yt-vid() {
+	youtube-dl --output "/mnt/8e1a266a-26aa-4ece-8a5f-9e8c6cdec7c9/Videos/$1.mp4"  --add-metadata $2 ;
 }
 
 function mkcd() {
 	mkdir $1
 	cd $1
 }
-
 #printf '\n%.0s' {1..100}
 #randomly choose a 'image' to display on load
-#/home/j/Code/shell-scripts/termstart.sh
+/home/j/Code/shell-scripts/termstart.sh
 
